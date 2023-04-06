@@ -31,5 +31,12 @@ From
 
 --Comando TOP é bom para filtrar uma tabela com muitas linhas, que nesse caso abaixo
 --Tem mais de 4 milhoes de linhas
---Tem um tempo dw execução de 6 minutos
+--Tem um tempo dw execução de 1:14  minutos
 SELECT * FROM FactSales
+
+SELECT
+TOP(1)
+PERCENT
+	*
+FROM
+	FactSales
