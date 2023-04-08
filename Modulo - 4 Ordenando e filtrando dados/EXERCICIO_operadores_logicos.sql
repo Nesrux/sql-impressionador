@@ -43,3 +43,4 @@ FROM
 WHERE 
 	SalesTerritoryGroup = 'Europe' 
 	AND NOT SalesTerritoryCountry = 'italy'
+	w
