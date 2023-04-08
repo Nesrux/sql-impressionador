@@ -33,3 +33,13 @@ WHERE
 	BrandName = 'LitWare'
 	OR BrandName = 'Fabrikam'
 	OR ColorName = 'BLack'
+
+--4. SELECIONE todas as linhas da tabela DimSalesTerritory onde o continente
+-- é a euripa mas o pais nao é a itália
+SELECT
+	*
+FROM 
+	DimSalesTerritory
+WHERE 
+	SalesTerritoryGroup = 'Europe' 
+	AND NOT SalesTerritoryCountry = 'italy'
