@@ -11,3 +11,6 @@ WHERE
 	(ColorName = 'Black'
 	OR ColorName = 'Red')
 	AND	BrandName = 'Fabrikam'
+--Igual na matemárica, o SQL tem uma forma de definir
+--oque vai ser executado primeiro no mesmo estilo do
+--Pendas
