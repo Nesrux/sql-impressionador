@@ -10,11 +10,14 @@ $5.000.000.
 SELECT 
 	ProductKey AS 'Id do produto',
 	SUM(SalesAmount) AS 'Total de vendas'
-From FactSales
-GROUP BY ProductKey
+From
+	FactSales
+GROUP BY
+	ProductKey
 HAVING
 	SUM(SalesAmount) >= 5000000
-ORDER BY [Total de vendas] DESC
+ORDER BY
+	[Total de vendas] DESC
 
 /*
 b) Faça uma adaptação no exercício anterior e mostre os Top 10 produtos com mais vendas.
@@ -25,8 +28,9 @@ SELECT
 	TOP(10)
 	ProductKey AS 'Id do produto',
 	SUM(SalesAmount) AS 'Total de vendas'
-From FactSales
-GROUP BY ProductKey
-HAVING
-	SUM(SalesAmount) >= 5000000
-ORDER BY [Total de vendas] DESC
+From 
+	FactSales
+GROUP BY
+	ProductKey
+ORDER BY 
+	[Total de vendas] DESC
