@@ -10,7 +10,7 @@ GROUP BY BrandName
 */
 SELECT 
 	StoreType AS 'Tipo de loja',
-	COUNT(EmployeeCount) AS 'Quantidade de funcionaios'
+	SUM(EmployeeCount) AS 'Quantidade de funcionaios'
 From 
 	DimStore 
 WHERE
