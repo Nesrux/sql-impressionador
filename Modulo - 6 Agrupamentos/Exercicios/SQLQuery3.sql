@@ -16,14 +16,16 @@ Group by CustomerKey ORDER BY [Qtda de compras] DESC;
 
 /*
 b) Feito isso, faça um agrupamento de total vendido (SalesQuantity) por ID do produto
-e descubra quais foram os top 3 produtos mais comprados pelo cliente da letra a).
+e descubra quais foram os top 3 produtos mais comprados pelo cliente da letra a) 19037.
+SELECT top(1) * from FactOnlineSales
 */
-
 SELECT TOP(3)
-	SUM(SalesQuantity) as 'qtda vendida',
-	ProductKey as 'id do produto'
+	ProductKey AS 'id produto',
+	SUM(SalesQuantity) as 'qtda vendida'	
 From 
 	FactOnlineSales
+WHERE
+	CustomerKey = 19037
 GROUP BY 
 	ProductKey 
 ORDER BY [qtda vendida] DESC
